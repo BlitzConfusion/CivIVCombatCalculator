@@ -46,5 +46,3 @@ Jos First Strike Chance:a ei implementoida, voidaan First Strike rajaus nostaa 1
 Graafinen käyttöliittymä on kaksiosainen lista, johon voi syöttää haluamansa arvot.
 Painettaessa 'Simulate' saadaan eriteltynä voittotodennäköisyys, Withdrawal Chance,
 ja mahdollisesti vielä voitossa keskimääräinen elämän määrä todennäköisellä voittajalla.
-
-Siirtotesti.
