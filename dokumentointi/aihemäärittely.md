@@ -1,5 +1,5 @@
 ﻿# CivIVCombatCalculator
-CivIVCombatCalculator on Civilization IV: Beyond the Sword pelin Taistelumekaniikan laskija,
+AIHE: CivIVCombatCalculator on Civilization IV: Beyond the Sword pelin Taistelumekaniikan laskija,
 jolla voi tarkistaa teoreettisia tilanteita ilman tarvetta ensin luoda vaikeasti alustettavia pelitilanteita,
 tai teoreetisemmissa tapauksissa uusien hahmojen tai ominaisuuksien koodausta.
 Koska kyseessä on epätriviaali määrä toistuvaa todennäköisyyslaskentaa, saattaa olla, että monimutkaisempi
@@ -39,12 +39,14 @@ First Strike Chance on kuin First Strike, mutta ei automaattinen. Jos osapuolell
 FSC on monimutkaisempi lisättävä, koska silloin muodostuu vastaava määrä skenaarioita jotka täytyy laskea
 erikseen, ja näin laskea kokonaistodennäköisyys. Vielä vaikeampaa jos kummallakin osapuolella on FSC:ejä.
 
-Calculatoriin oletetaan, että aiheutettu vahinko on 5%-100%, koska pelissä pienempi arvo veisi aikaa.
-Lisäksi oletetaan että sekä First Strike että First Strike Chance on 0-5.
+Calculatoriin oletetaan, että aiheutettu vahinko on 10%-100%, koska pelissä pienempi arvo veisi aikaa.
+Lisäksi oletetaan että sekä First Strike on 0-5, First Strike Chance on 0-4.
 Jos First Strike Chance:a ei implementoida, voidaan First Strike rajaus nostaa 10:een.
 
 Graafinen käyttöliittymä on kaksiosainen lista, johon voi syöttää haluamansa arvot.
 Painettaessa 'Simulate' saadaan eriteltynä voittotodennäköisyys, Withdrawal Chance,
 ja mahdollisesti vielä voitossa keskimääräinen elämän määrä todennäköisellä voittajalla.
 
-Siirtotesti.
+KÄYTTÄJÄT: Pelaaja tai suunnittelija
+
+KAIKKIEN KÄYTTÄJIEN TOIMINNOT: hahmojen olennaisten ominaisuuksien asettaminen. Yleisten olosuhteiden asettaminen. Näiden perusteella tapahtuvan taistelun lopputuloksen laskemisen käynnistäminen.
