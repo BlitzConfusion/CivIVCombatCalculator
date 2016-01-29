@@ -48,4 +48,4 @@ Painettaessa 'Simulate' saadaan eriteltynä voittotodennäköisyys, Withdrawal C
 ja mahdollisesti vielä voitossa keskimääräinen elämän määrä todennäköisellä voittajalla.
 
 
-![Alt text](/BlitzConfusion/CivIVCombatCalculator/blob/master/Kaavio.png)
+![Alt text](https://github.com/BlitzConfusion/CivIVCombatCalculator/blob/master/Kaavio.png)
