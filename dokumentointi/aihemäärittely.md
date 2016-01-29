@@ -50,3 +50,7 @@ ja mahdollisesti vielä voitossa keskimääräinen elämän määrä todennäkö
 KÄYTTÄJÄT: Pelaaja tai suunnittelija
 
 KAIKKIEN KÄYTTÄJIEN TOIMINNOT: hahmojen olennaisten ominaisuuksien asettaminen. Yleisten olosuhteiden asettaminen. Näiden perusteella tapahtuvan taistelun lopputuloksen laskemisen käynnistäminen.
+
+## Luokkakaavio
+
+![Alt text](https://github.com/BlitzConfusion/CivIVCombatCalculator/blob/master/Kaavio.png)
