@@ -7,8 +7,8 @@
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
@@ -24,8 +24,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
                 <version>3.3</version>
             </plugin>
@@ -35,12 +35,12 @@
                 <version>1.1.8</version>
                 <configuration>
                     <targetClasses>
-                        <param>civivcombatcalculator.logiikka.*</param>
-                        <param>civivcombatcalculator.*</param>
+                        <param>civivcombatcalculator.civivcombatcalculator.Voimasuhde</param>
+                        <param>civivcombatcalculator.civivcombatcalculator.Kombinatooria</param>
                     </targetClasses>
                     <targetTests>
-                        <param>civivcombatcalculator.logiikka.*</param>
-                        <param>civivcombatcalculator.tekoaly.*</param>
+                        <param>civivcombatcalculator.civivcombatcalculator.VoimasuhdeTest</param>
+                        <param>civivcombatcalculator.civivcombatcalculator.KombinatooriaTest</param>
                     </targetTests>
                 </configuration>
             </plugin>
