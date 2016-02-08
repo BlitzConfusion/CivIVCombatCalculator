@@ -5,3 +5,5 @@ Noin 2 tuntia Netbeans CivIVCombatCalculator:n alustukseen.
 Noin tunti githubin kansiorakenteen vaatimusten tarkastamiseen.
 
 29.1.2016: Noin kuusi tuntia luokkien luomiseen, sisällön rakentamiseen ja luokkakaavion tekemiseen.
+Lisätty Kombinatooria, FS-, Laskija, ja Voimasuhde -luokat, ja vastaavat testiluokat.
+Ainoastaan Voimasuhde ja Kombinatooria saaneet sisältöä testeihinsä.

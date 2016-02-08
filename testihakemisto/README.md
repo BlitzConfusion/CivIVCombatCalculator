@@ -43,6 +43,9 @@ Calculatoriin oletetaan, että aiheutettu vahinko on 10%-100%, koska pelissä pi
 Lisäksi oletetaan että sekä First Strike on 0-5, First Strike Chance on 0-4.
 Jos First Strike Chance:a ei implementoida, voidaan First Strike rajaus nostaa 10:een.
 
-Graafinen käyttöliittymä on kaksiosainen lista, johon voi syöttää haluamansa arvot.
+Graafinen käyttöliittymä on kolmiosainen lista, johon voi syöttää haluamansa arvot.
 Painettaessa 'Simulate' saadaan eriteltynä voittotodennäköisyys, Withdrawal Chance,
 ja mahdollisesti vielä voitossa keskimääräinen elämän määrä todennäköisellä voittajalla.
+
+
+![Alt text](https://github.com/BlitzConfusion/CivIVCombatCalculator/blob/master/Kaavio.png)
