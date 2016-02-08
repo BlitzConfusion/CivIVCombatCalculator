@@ -37,10 +37,15 @@
                     <targetClasses>
                         <param>civivcombatcalculator.civivcombatcalculator.Voimasuhde</param>
                         <param>civivcombatcalculator.civivcombatcalculator.Kombinatooria</param>
+                        <param>civivcombatcalculator.civivcombatcalculator.Laskija</param>
+                        <param>civivcombatcalculator.civivcombatcalculator.FSKombinatooria</param>
+                        
                     </targetClasses>
                     <targetTests>
                         <param>civivcombatcalculator.civivcombatcalculator.VoimasuhdeTest</param>
                         <param>civivcombatcalculator.civivcombatcalculator.KombinatooriaTest</param>
+                        <param>civivcombatcalculator.civivcombatcalculator.LaskijaTest</param>
+                        <param>civivcombatcalculator.civivcombatcalculator.FSKombinatooria</param>
                     </targetTests>
                 </configuration>
             </plugin>

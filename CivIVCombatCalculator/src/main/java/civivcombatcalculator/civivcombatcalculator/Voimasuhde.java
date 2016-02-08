@@ -9,6 +9,7 @@ import static java.lang.Math.ceil;
  *
  * @author Tatu
  */
+//toimii
 public class Voimasuhde {
     private final double hyokkayssuhde;
     private final double puolustussuhde;

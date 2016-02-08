@@ -59,8 +59,10 @@ public class Laskija {
         double subChance = 0;
         if (attack < defend) {
             for(int i = 0; i < dLength; i++) {
-                int vali = kombi.kombinaatio(2, 2);
-                subChance = (double) vali;
+                subChance = (double) kombi.kombinaatio(aLength + i, dLength);
+                if (subChance == -1) {
+                    return -1;
+                }
                 subChance *= Math.pow(defend, (double) dLength);
                 subChance *= Math.pow(attack, (double) i);
                 chance += subChance;
@@ -68,7 +70,10 @@ public class Laskija {
             return (1.0 - chance);
         } else {
             for(int j = 0; j < aLength; j++) {
-                subChance = kombi.kombinaatio(2, 2);
+                subChance = (double) kombi.kombinaatio(dLength + j, aLength);
+                if (subChance == -1) {
+                    return -1;
+                }
                 subChance *= pow(attack, (double) aLength);
                 subChance *= pow(defend, (double) j);
                 chance += subChance;

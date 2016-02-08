@@ -16,7 +16,7 @@ public class Main {
         //jostain syystä chanssit aiheuttaa nullpointerexceptionin. Miksi?
         //Voimasuhde vs = new Voimasuhde(40, 38.09);
         Kombinatooria kombi = new Kombinatooria();
-        System.out.println(kombi.kombinaatio(1, 0));
+        System.out.println(kombi.kombinaatio(18, 9));
         //System.out.println("ABAABA");
         //System.out.println(vs.attackReturn());
         //System.out.println(vs.defendReturn());

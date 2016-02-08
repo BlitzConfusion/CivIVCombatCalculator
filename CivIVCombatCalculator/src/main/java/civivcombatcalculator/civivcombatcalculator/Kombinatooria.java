@@ -13,18 +13,21 @@ public class Kombinatooria {
     
     public Kombinatooria() {
     }
-    
+    //Jostain syystä kutsuttaessa tietyistä luokista tulee nullpointerException.
     public int kombinaatio(int n, int k) {
         int result = 1;
-        if (n == k || n == 0 || n == 1 || k == 0 || k == 1) {
+        if (n <= 1 || k <= 1 || n <= k || n - k <= 1) {
             return result;
         }
+        if (n >= 19 && Math.min(k, n - k) >= 6) {
+            return -1;
+        }
         if (k < n - k) {
-            result *= permutaatio(n, n - k);
+            result *= permutaatio(n, n - k + 1);
             result /= permutaatio(k, 2);
                 
         } else {
-            result *= permutaatio(n, k);
+            result *= permutaatio(n, k + 1);
             result /= permutaatio(n - k, 2);
         
         }
