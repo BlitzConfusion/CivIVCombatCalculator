@@ -11,14 +11,30 @@ package civivcombatcalculator.civivcombatcalculator;
  */
 public class Kombinatooria {
     
-    public int kombinaatio(int n, int k) {
-        return permutaatio(n) / (permutaatio(k) * permutaatio(n - k));
+    public Kombinatooria() {
     }
-
-    public int permutaatio(int i) {
-        if (i == 1 || i == 0) {
-            return 1;
+    
+    public int kombinaatio(int n, int k) {
+        int result = 1;
+        if (n == k || n == 0 || n == 1 || k == 0 || k == 1) {
+            return result;
         }
-        return i * permutaatio(i - 1);
+        if (k < n - k) {
+            result *= permutaatio(n, n - k);
+            result /= permutaatio(k, 2);
+                
+        } else {
+            result *= permutaatio(n, k);
+            result /= permutaatio(n - k, 2);
+        
+        }
+        return result;
+    }
+    private int permutaatio( int n, int k) {
+        int sum = 1;
+        for(int i = k; i <= n; i++) {
+                sum *= i;
+            }
+        return sum;
     }
 }

@@ -5,28 +5,38 @@
  * and open the template in the editor.
  */
 package civivcombatcalculator.civivcombatcalculator;
-import java.util.*;
+
+import static java.lang.Math.pow;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Tatu
  */
 public class Laskija {
-    private final Voimasuhde voimasuhde;
-    private FSKombinatooria fsKombinatooria;
-    private Kombinatooria kombinatooria;
+    private Voimasuhde voimasuhde;
+    //private FSKombinatooria fsKombinatooria;
+    private Kombinatooria kombi;
     
     public Laskija(double attack, double defend, int abonus, int dbonus,
-            int attackFS, int defendFS) throws Exception {
+            int attackFS, int defendFS) {
         int bonus;
+        double a = attack;
+        double d = defend;
         if (abonus < dbonus) {
             bonus = dbonus - abonus;
-            defend *= (bonus + 100) / 100;
+            d *= 1.0 * (bonus + 100) / 100;
         } else {
             bonus = abonus - dbonus;
-            attack *= (bonus + 100) / 100;
+            a *= 1.0 * (bonus + 100) / 100;
         }
-        voimasuhde = new Voimasuhde(attack, defend);
-        fsKombinatooria = new FSKombinatooria(voimasuhde, attackFS, defendFS);
+        try {
+            voimasuhde = new Voimasuhde(a, d);
+            //fsKombinatooria = new FSKombinatooria(voimasuhde, attackFS, defendFS);
+        } catch (Exception ex) {
+            System.out.println("Invalid values");
+        }
     }
     
     public static int kertoma(int n) {
@@ -36,10 +46,36 @@ public class Laskija {
         }
         return kertoma;
     }
-    public static double laskeTod(){
+    
+    public double laskeHyokkaysTod(){
+        //Tämä on alustavasti ilman First Strikea jotta saan pohjan aikaiseksi.
+        // jostain syystä kombinatoorian kombinaatio-metodin kutsunta aiheuttaa
+        // NullPointerExceptionin. Miksi?
+        double chance = 0;
+        double attack = voimasuhde.attackReturn();
+        double defend = voimasuhde.defendReturn();
+        int aLength = voimasuhde.victoryAttackReturn();
+        int dLength = voimasuhde.victoryDefendReturn();
+        double subChance = 0;
+        if (attack < defend) {
+            for(int i = 0; i < dLength; i++) {
+                int vali = kombi.kombinaatio(2, 2);
+                subChance = (double) vali;
+                subChance *= Math.pow(defend, (double) dLength);
+                subChance *= Math.pow(attack, (double) i);
+                chance += subChance;
+            }
+            return (1.0 - chance);
+        } else {
+            for(int j = 0; j < aLength; j++) {
+                subChance = kombi.kombinaatio(2, 2);
+                subChance *= pow(attack, (double) aLength);
+                subChance *= pow(defend, (double) j);
+                chance += subChance;
+            }
+        }
         
-        
-        return 100;
+        return chance;
         
     
     }

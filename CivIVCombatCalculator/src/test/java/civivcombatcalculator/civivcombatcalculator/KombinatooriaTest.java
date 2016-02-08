@@ -46,6 +46,7 @@ public class KombinatooriaTest {
       int k = komb.kombinaatio(1, 0);
       assertTrue(1 == k);
    }
+    @Test
     public void testOne() throws Exception {	
       System.out.println("Test One situation");
       int  n = rand.nextInt(50) + 1;
@@ -53,6 +54,7 @@ public class KombinatooriaTest {
       int k = komb.kombinaatio(1, 1);
       assertTrue(1 == k);
    }
+    @Test
     public void testRand() throws Exception {	
       System.out.println("Test Random situation");
       int  n = rand.nextInt(50) + 2;
@@ -60,6 +62,7 @@ public class KombinatooriaTest {
       int k = komb.kombinaatio(n, 1);
       assertTrue(k >= 2);
    }
+    @Test
     public void testComparison() throws Exception {	
       System.out.println("Test Random comparison situation");
       int  n = rand.nextInt(50) + 1;

@@ -49,8 +49,8 @@ public class VoimasuhdeTest {
      * @throws java.lang.Exception
      */
     @Test
-    public void testZero() throws Exception {	
-      System.out.println("Test Basic situation");
+    public void testOne() throws Exception {	
+      System.out.println("Test Equal situation");
       int  n = rand.nextInt(50) + 1;
       Voimasuhde vs = new Voimasuhde(n, n);
       assertTrue(vs.attackReturn() == 0.5);
@@ -99,5 +99,19 @@ public class VoimasuhdeTest {
       int  k = rand.nextInt(50) + 1;
       Voimasuhde vs = new Voimasuhde(n, k);
       assertTrue(1 == vs.attackReturn() + vs.defendReturn());
+   }
+    @Test
+    public void testAVictoryEqual() throws Exception {	
+      System.out.println("Test Equal Attacker victory situation");
+      int  n = rand.nextInt(50) + 1;
+      Voimasuhde vs = new Voimasuhde(n, n);
+      assertTrue(vs.victoryAttackReturn() == 5);
+   }
+    @Test
+    public void testBVictoryEqual() throws Exception {	
+      System.out.println("Test Equal Defender victory situation");
+      int  n = rand.nextInt(50) + 1;
+      Voimasuhde vs = new Voimasuhde(n, n);
+      assertTrue(vs.victoryDefendReturn() == 5);
    }
 }
