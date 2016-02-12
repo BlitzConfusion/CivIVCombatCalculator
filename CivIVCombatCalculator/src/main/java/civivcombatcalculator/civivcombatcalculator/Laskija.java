@@ -11,14 +11,24 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Tatu
+ *Keskeisin luokka varsinaisen taistelun todennäköisyyksien kannalta.
+ * Kysyy muilta luokilta laskutoimituksia, ja soveltaa tulokset.
+ * Tulee myöhemmin laskemaan keskimäärin voittajalle jääneen elämän.
  */
 public class Laskija {
     private Voimasuhde voimasuhde;
-    //private FSKombinatooria fsKombinatooria;
+    private FSKombinatooria fsKombinatooria;
     private Kombinatooria kombi;
     
+    /**
+     * Konstruktori tallentaa taistelun oleelliset tiedot.
+     * @param attack on hyökkääjän voima.
+     * @param defend on puolustajan voima.
+     * @param abonus on hyökkääjän %-bonus taisteluun.
+     * @param dbonus on puolustajan %-bonus taisteluun.
+     * @param attackFS on hyökkääjan First Strike:n määrä.
+     * @param defendFS on puolustajan First Strike:n määrä.
+     */
     public Laskija(double attack, double defend, int abonus, int dbonus,
             int attackFS, int defendFS) {
         int bonus;
@@ -33,20 +43,16 @@ public class Laskija {
         }
         try {
             voimasuhde = new Voimasuhde(a, d);
-            //fsKombinatooria = new FSKombinatooria(voimasuhde, attackFS, defendFS);
+            fsKombinatooria = new FSKombinatooria(voimasuhde, attackFS, defendFS);
         } catch (Exception ex) {
             System.out.println("Invalid values");
         }
     }
     
-    public static int kertoma(int n) {
-        int kertoma = 1;
-        for (int i = 1; i <= n; i++) {
-            kertoma *= i;
-        }
-        return kertoma;
-    }
-    
+    /**
+     * Laskee ja kertoo hyökkääjän voiton todennäköisyyden.
+     * @return on hyökkääjän voiton todennäköisyys.
+     */
     public double laskeHyokkaysTod(){
         //Tämä on alustavasti ilman First Strikea jotta saan pohjan aikaiseksi.
         // jostain syystä kombinatoorian kombinaatio-metodin kutsunta aiheuttaa
@@ -83,11 +89,5 @@ public class Laskija {
         return chance;
         
     
-    }
-    public static double kertomaOsuus(int a, int b) {
-        double summa = kertoma(a + b) * 1.0;
-        double akertoma = kertoma(a) * 1.0;
-        double bkertoma = kertoma(b) * 1.0;
-        return summa / (akertoma * bkertoma);
     }
 }

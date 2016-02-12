@@ -6,14 +6,24 @@
 package civivcombatcalculator.civivcombatcalculator;
 
 /**
- *
- * @author Tatu
+ * Luokka laskee annettujen tapausmäärien perusteella mahdollisten kombinaatioiden
+ * määrän, ja palauttaa lopputuloksena sen.
  */
 public class Kombinatooria {
     
+    
+    /**
+     * Luokalla ei attribuutteja, joten konstruktori ei varsinaisesti tärkeä.
+     */
     public Kombinatooria() {
     }
-    //Jostain syystä kutsuttaessa tietyistä luokista tulee nullpointerException.
+    
+    /**
+     * Metodi laskee tapauksien P ja !P kombinaatioiden lukumäärän.
+     * @param n on tapausten kokonaismäärä, joka settaa ylärajan kombinaatioille.
+     * @param k on P, ja n-k on!P. Antaa tiedon kuinka monta kertaa k tapahtuu.
+     * @return P ja !P mahdollisten kombinaatioiden määrän joukossa n.
+     */
     public int kombinaatio(int n, int k) {
         int result = 1;
         if (n <= 1 || k <= 1 || n <= k || n - k <= 1) {
@@ -33,6 +43,14 @@ public class Kombinatooria {
         }
         return result;
     }
+    
+    /**
+     * Laskee kertolaskun tuloksen luvusta toiseen kaikki väliluvut läpikäyden.
+     * Kertoman toimintoa jäljittelevä metodi.
+     * @param n on viimeinen kerrottava luku.
+     * @param k on ensimmäinen kerrottava luku.
+     * @return typistetyn kertoman tulos.
+     */
     private int permutaatio( int n, int k) {
         int sum = 1;
         for(int i = k; i <= n; i++) {
