@@ -13,9 +13,14 @@ import graphicspackage.*;
 public class Main {
     
     public static void main(String[] args) {
-        CombatCalculator laskin = new CombatCalculator();
-        
-        
+        //CombatCalculator laskin = new CombatCalculator();
+        Laskija laske = new Laskija(60, 60, 0, 0, 0, 0, 0, 20, 20);
+        System.out.println(laske.returnOdds());
+        Laskija lasku = new Laskija(60, 60, 0, 0, 0, 0, 0, 20, 0);
+        System.out.println(lasku.returnOdds());
+        System.out.println(laske.returnWithdraw());
+        //Kombinatooria kombi = new Kombinatooria(7, 5);
+        //System.out.println(kombi.kombinaatio());
     }
 }
     

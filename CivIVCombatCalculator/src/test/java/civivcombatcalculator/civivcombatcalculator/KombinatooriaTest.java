@@ -42,16 +42,16 @@ public class KombinatooriaTest {
     public void testZero() throws Exception {	
       System.out.println("Test Zero situation");
       int  n = rand.nextInt(50) + 1;
-      Kombinatooria komb = new Kombinatooria();
-      int k = komb.kombinaatio(1, 0);
+      Kombinatooria komb = new Kombinatooria(1, 0);
+      int k = komb.kombinaatio();
       assertTrue(1 == k);
    }
     @Test
     public void testOne() throws Exception {	
       System.out.println("Test One situation");
       int  n = rand.nextInt(50) + 1;
-      Kombinatooria komb = new Kombinatooria();
-      int k = komb.kombinaatio(1, 1);
+      Kombinatooria komb = new Kombinatooria(1, 1);
+      int k = komb.kombinaatio();
       assertTrue(1 == k);
    }
     //Jostain syystä tulee nullpointerexception.

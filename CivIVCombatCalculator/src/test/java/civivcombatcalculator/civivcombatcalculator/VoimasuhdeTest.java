@@ -51,45 +51,45 @@ public class VoimasuhdeTest {
     @Test
     public void testOne() throws Exception {	
       System.out.println("Test Equal situation");
-      int  n = rand.nextInt(50) + 1;
-      Voimasuhde vs = new Voimasuhde(n, n);
+      double  n = (double) rand.nextInt(50) + 1.0;
+      Voimasuhde vs = new Voimasuhde(n, n, 0.2);
       assertTrue(vs.attackReturn() == 0.5);
    }
    @Test
     public void testLess() throws Exception {	
       System.out.println("Test Weak Defender");
-      int  n = rand.nextInt(50) + 1;
-      Voimasuhde vs = new Voimasuhde(n, 1);
+      double  n = (double) rand.nextInt(50) + 1.0;
+      Voimasuhde vs = new Voimasuhde(n, 1.0, 0.2);
       assertTrue(vs.attackReturn() >= 0.5);
    }
    @Test
     public void testLessD() throws Exception {	
       System.out.println("Test Weak Defender with Defender Ratio");
-      int  n = rand.nextInt(50) + 1;
-      Voimasuhde vs = new Voimasuhde(n, 1);
+      double  n = (double) rand.nextInt(50) + 1.0;
+      Voimasuhde vs = new Voimasuhde(n, 1.0, 0.2);
       assertTrue(vs.defendReturn() <= 0.5);
    }
     @Test
     public void testMoreD() throws Exception {	
       System.out.println("Test Strong Defender with DRatio");
-      int  n = rand.nextInt(50) + 1;
-      Voimasuhde vs = new Voimasuhde(1, n);
+      double  n = (double) rand.nextInt(50) + 1.0;
+      Voimasuhde vs = new Voimasuhde(1.0, n, 0.2);
       assertTrue(vs.defendReturn() >= 0.5);
    }
     @Test
     public void testMore() throws Exception {	
       System.out.println("Test Strong Defender with DRatio");
-      int  n = rand.nextInt(50) + 1;
-      Voimasuhde vs = new Voimasuhde(1, n);
+      double  n = (double) rand.nextInt(50) + 1.0;
+      Voimasuhde vs = new Voimasuhde(1.0, n, 0.2);
       assertTrue(vs.attackReturn() <= 0.5);
    }
     @Test
     public void testLessRatio() throws Exception {	
       System.out.println("Test Weak Defender Ratio");
-      int  n = rand.nextInt(50) + 1;
-      int k = rand.nextInt(10) + 1;
+      double  n = (double) rand.nextInt(50) + 1.0;
+      double k = (double) rand.nextInt(10) + 1;
       double z = 1.0 / (k + 1); 
-      Voimasuhde vs = new Voimasuhde(n, n * k);
+      Voimasuhde vs = new Voimasuhde(n, n * k, 0.2);
       assertTrue(vs.attackReturn() == z);
    }
     @Test
@@ -97,21 +97,21 @@ public class VoimasuhdeTest {
       System.out.println("Test ratio sum");
       int  n = rand.nextInt(50) + 1;
       int  k = rand.nextInt(50) + 1;
-      Voimasuhde vs = new Voimasuhde(n, k);
+      Voimasuhde vs = new Voimasuhde(n, k, 0.2);
       assertTrue(1 == vs.attackReturn() + vs.defendReturn());
    }
     @Test
     public void testAVictoryEqual() throws Exception {	
       System.out.println("Test Equal Attacker victory situation");
       int  n = rand.nextInt(50) + 1;
-      Voimasuhde vs = new Voimasuhde(n, n);
+      Voimasuhde vs = new Voimasuhde(n, n, 0.2);
       assertTrue(vs.victoryAttackReturn() == 5);
    }
     @Test
     public void testBVictoryEqual() throws Exception {	
       System.out.println("Test Equal Defender victory situation");
       int  n = rand.nextInt(50) + 1;
-      Voimasuhde vs = new Voimasuhde(n, n);
+      Voimasuhde vs = new Voimasuhde(n, n, 0.2);
       assertTrue(vs.victoryDefendReturn() == 5);
    }
 }

@@ -43,7 +43,7 @@ public class LaskijaTest {
     //@Test
     //public void testZero() throws Exception {	
     //System.out.println("Test Basic situation");
-    //double  n = (double) rand.nextInt(50) + 1.0;
+    //int n = rand.nextInt(50) + 1;
     //Laskija laskija = new Laskija(n, n, 0, 0, 0, 0);
     //assertTrue(laskija.laskeHyokkaysTod() == 0.5);
     //}

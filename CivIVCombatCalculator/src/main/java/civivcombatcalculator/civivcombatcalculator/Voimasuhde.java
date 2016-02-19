@@ -10,17 +10,20 @@ package civivcombatcalculator.civivcombatcalculator;
 public class Voimasuhde {
     private final double hyokkayssuhde;
     private final double puolustussuhde;
+    private final double damage;
     
     
     /**
      * Konstruktori tallentaa voimasuhteet osapuolten näkökulmista.
      * @param attack on hyökkääjän voiman arvo.
      * @param defend on puolustajan voiman arvo.
+     * @param damagePerRound on vuorossa hyökkääjän voimasta aiheutettu vahinko.
      */
-    public Voimasuhde(double attack, double defend) {
+    public Voimasuhde(double attack, double defend, double damagePerRound) {
         
         hyokkayssuhde = attack / (attack + defend);
         puolustussuhde = defend / (attack + defend);
+        damage = damagePerRound;
     }
     /**
      * @return palauttaa hyökkääjän voimasuhteen.
@@ -37,13 +40,12 @@ public class Voimasuhde {
     
     /**
      * Metodi laskee kuinka monta voittoa puolustaja tarvitsee hyökkääjän 
-     * tappamiseen. Myöhemmin tulee ottamaan huomion vahingon määrän, tällä
-     * hetkellä toimii default Damage/Turn:llä.
+     * tappamiseen.
      * @return puolustajan vaatimien voittojen määrä.
      */
     public int victoryDefendReturn() {
-        double damage = puolustussuhde / hyokkayssuhde * 0.2;
-        int rounds = (int) Math.ceil(1.0 / damage);
+        double actualDamage = puolustussuhde * damage / hyokkayssuhde;
+        int rounds = (int) Math.ceil(1.0 / actualDamage);
         return rounds;
     }
     /**
@@ -53,8 +55,8 @@ public class Voimasuhde {
      * @return hyökkääjän vaatimien voittojen määrä.
      */
     public int victoryAttackReturn() {
-        double damage = hyokkayssuhde / puolustussuhde * 0.2;
-        int rounds = (int) Math.ceil(1.0 / damage);
+        double actualDamage = hyokkayssuhde * damage / puolustussuhde;
+        int rounds = (int) Math.ceil(1.0 / actualDamage);
         return rounds;
     }
     

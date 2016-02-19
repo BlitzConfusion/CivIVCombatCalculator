@@ -6,19 +6,18 @@
  */
 package civivcombatcalculator.civivcombatcalculator;
 
-import static java.lang.Math.pow;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *Keskeisin luokka varsinaisen taistelun todennäköisyyksien kannalta.
  * Kysyy muilta luokilta laskutoimituksia, ja soveltaa tulokset.
  * Tulee myöhemmin laskemaan keskimäärin voittajalle jääneen elämän.
  */
-public class Laskija {
+public final class Laskija {
     private Voimasuhde voimasuhde;
     private FSKombinatooria fsKombinatooria;
-    private Kombinatooria kombi;
+    private int withdrawal;
+    private int damagePerTurn;
+    private int rounds;
+    private double propability;
     
     /**
      * Konstruktori tallentaa taistelun oleelliset tiedot.
@@ -29,65 +28,88 @@ public class Laskija {
      * @param attackFS on hyökkääjan First Strike:n määrä.
      * @param defendFS on puolustajan First Strike:n määrä.
      */
-    public Laskija(double attack, double defend, int abonus, int dbonus,
-            int attackFS, int defendFS) {
+    public Laskija(int attack, int defend, int abonus, int dbonus,
+            int attackFS, int defendFS, int time, int damage, int withdraw) {
         int bonus;
-        double a = attack;
-        double d = defend;
+        withdrawal = withdraw;
+        damagePerTurn = damage;
+        rounds = time;
+        double a = (double) attack;
+        double d = (double) defend;
         if (abonus < dbonus) {
             bonus = dbonus - abonus;
-            d *= 1.0 * (bonus + 100) / 100;
+            d *= (double) (bonus + 100) / (double) 100;
         } else {
             bonus = abonus - dbonus;
-            a *= 1.0 * (bonus + 100) / 100;
+            a *= (double)(bonus + 100) / (double)100;
         }
-        try {
-            voimasuhde = new Voimasuhde(a, d);
-            fsKombinatooria = new FSKombinatooria(voimasuhde, attackFS, defendFS);
-        } catch (Exception ex) {
-            System.out.println("Invalid values");
+        voimasuhde = new Voimasuhde(a, d, 0.01 * damage);
+        fsKombinatooria = new FSKombinatooria(voimasuhde, attackFS, defendFS);
+        if (rounds == 0) {
+            laskeHyokkaysTod();
+        } else {
+            laskeRajoitettu();
         }
+        
     }
     
     /**
      * Laskee ja kertoo hyökkääjän voiton todennäköisyyden.
-     * @return on hyökkääjän voiton todennäköisyys.
      */
-    public double laskeHyokkaysTod(){
-        //Tämä on alustavasti ilman First Strikea jotta saan pohjan aikaiseksi.
-        // jostain syystä kombinatoorian kombinaatio-metodin kutsunta aiheuttaa
-        // NullPointerExceptionin. Miksi?
+    //Tämä on alustava esimerkki ennen First Striken lisäystä.
+    public void laskeHyokkaysTod(){
         double chance = 0;
         double attack = voimasuhde.attackReturn();
         double defend = voimasuhde.defendReturn();
         int aLength = voimasuhde.victoryAttackReturn();
         int dLength = voimasuhde.victoryDefendReturn();
-        double subChance = 0;
-        if (attack < defend) {
-            for(int i = 0; i < dLength; i++) {
-                subChance = (double) kombi.kombinaatio(aLength + i, dLength);
-                if (subChance == -1) {
-                    return -1;
-                }
-                subChance *= Math.pow(defend, (double) dLength);
-                subChance *= Math.pow(attack, (double) i);
+        if (aLength < dLength) {
+            for (int i = 0; i < aLength; i++) {
+                Kombinatooria kombi = new Kombinatooria(dLength + i - 1, dLength - 1);
+                Double subChance = (double) kombi.kombinaatio();
+                subChance *= Math.pow(attack, i);
+                subChance *= Math.pow(defend, dLength);
                 chance += subChance;
             }
-            return (1.0 - chance);
+            propability = (double) 1 - chance;
         } else {
-            for(int j = 0; j < aLength; j++) {
-                subChance = (double) kombi.kombinaatio(dLength + j, aLength);
-                if (subChance == -1) {
-                    return -1;
-                }
-                subChance *= pow(attack, (double) aLength);
-                subChance *= pow(defend, (double) j);
+            for (int i = 0; i < dLength; i++) {
+                Kombinatooria kombi = new Kombinatooria(aLength + i - 1, aLength - 1);
+                Double subChance = (double) kombi.kombinaatio();
+                subChance *= Math.pow(defend, i);
+                subChance *= Math.pow(attack, aLength);
                 chance += subChance;
             }
+            propability = chance;
         }
         
-        return chance;
-        
+    }
+    
+    /**
+     * Tulee olemaan rajoitettujen taistelukierrosten todennäköisyyslaskija.
+     */
+    public void laskeRajoitettu() {
+        if (rounds * damagePerTurn * voimasuhde.attackReturn() 
+                < voimasuhde.victoryAttackReturn()) {
+            propability = 0;
+        }
+    }
+    
+    /**
+     * Palauttaa lopullisen Withdraw:n todennäköisyyden.
+     */
+    public double returnWithdraw() {
+        return ((double) 1) - propability * withdrawal;
     
     }
+    /**
+     * Palauttaa lopullisen hyökkääjän voittotodennäköisyyden.
+     */
+    public double returnOdds() {
+        if (rounds == 0) {
+            return propability * (double) 100;
+        }
+        return ((double) 1) - propability; 
+    }
+    
 }

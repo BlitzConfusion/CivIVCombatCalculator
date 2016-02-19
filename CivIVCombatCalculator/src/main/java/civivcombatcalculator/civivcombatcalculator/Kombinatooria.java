@@ -10,52 +10,47 @@ package civivcombatcalculator.civivcombatcalculator;
  * määrän, ja palauttaa lopputuloksena sen.
  */
 public class Kombinatooria {
+    int suuri;
+    int pieni;
     
     
     /**
      * Luokalla ei attribuutteja, joten konstruktori ei varsinaisesti tärkeä.
+     * @param suurempi on tapausten kokonaismäärä, joka settaa ylärajan kombinaatioille.
+     * @param pienempi on P, ja n-k on!P. Antaa tiedon kuinka monta kertaa k tapahtuu.
      */
-    public Kombinatooria() {
+    public Kombinatooria(int suurempi, int pienempi) {
+        suuri = suurempi;
+        pieni = pienempi;
     }
     
     /**
-     * Metodi laskee tapauksien P ja !P kombinaatioiden lukumäärän.
-     * @param n on tapausten kokonaismäärä, joka settaa ylärajan kombinaatioille.
-     * @param k on P, ja n-k on!P. Antaa tiedon kuinka monta kertaa k tapahtuu.
-     * @return P ja !P mahdollisten kombinaatioiden määrän joukossa n.
+     * Metodi laskee tapauksien P ja !P kombinaatioiden lukumäärän joukossa n.
      */
-    public int kombinaatio(int n, int k) {
-        int result = 1;
-        if (n <= 1 || k <= 1 || n <= k || n - k <= 1) {
-            return result;
+    public int kombinaatio() {
+        int n = suuri;
+        int k = pieni;
+        double result = (double) 1;
+        int h = n - k;
+        if (n < 1 || k < 1 || n == k || k > n) {
+            return (int) Math.round(result);
         }
-        if (n >= 19 && Math.min(k, n - k) >= 6) {
-            return -1;
+        if (n - k == 1) {
+            return n;
         }
-        if (k < n - k) {
-            result *= permutaatio(n, n - k + 1);
-            result /= permutaatio(k, 2);
-                
-        } else {
-            result *= permutaatio(n, k + 1);
-            result /= permutaatio(n - k, 2);
-        
-        }
-        return result;
-    }
-    
-    /**
-     * Laskee kertolaskun tuloksen luvusta toiseen kaikki väliluvut läpikäyden.
-     * Kertoman toimintoa jäljittelevä metodi.
-     * @param n on viimeinen kerrottava luku.
-     * @param k on ensimmäinen kerrottava luku.
-     * @return typistetyn kertoman tulos.
-     */
-    private int permutaatio( int n, int k) {
-        int sum = 1;
-        for(int i = k; i <= n; i++) {
-                sum *= i;
+        if (k > h) {
+            for (int i = 1; i <= h; i++) {
+                result *= (double) (n - h + i);
+                result /= (double) i;
             }
-        return sum;
+        } else {
+            for (int i = 1; i <= k; i++) {
+                result *= (double) (n - k + i);
+                result /= (double) i;
+            }
+        }
+        return (int) Math.round(result);
     }
+    
+    
 }
