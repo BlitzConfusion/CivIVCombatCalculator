@@ -12,3 +12,6 @@ Ainoastaan Voimasuhde ja Kombinatooria saaneet sisältöä testeihinsä.
 8.2.2016: 6 tuntia, joista 4 siihen että havaitsin INT arvon ylityksen, korjasin. Tämänkin jälkeen jostain syystä kombinatoorian metodin kutsunta muualta kuin kombinatooriasta tai main:sta aiheuttaa nullpointerexceptionin.
 
 Tähän palautukseen en saanut hirveästi aikaiseksi. Syytän 1.2. jatkunutta kuumetta. Harmillista. Olisin halunnut edetä kunnolla FS:ään asti.
+
+19.2. 2016: 7 tuntia: yritin saada todennäköisyyksiä toimimaan, sain first striket valmiiksi, ja laskinkin pelaa. 
+Testaukset jäivät tässä välissä vähiin.
