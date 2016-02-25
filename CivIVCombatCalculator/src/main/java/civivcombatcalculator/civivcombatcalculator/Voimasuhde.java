@@ -44,7 +44,8 @@ public class Voimasuhde {
      * @return puolustajan vaatimien voittojen määrä.
      */
     public int victoryDefendReturn() {
-        double actualDamage = puolustussuhde * damage / hyokkayssuhde;
+        double suhde = hyokkayssuhde / puolustussuhde;
+        double actualDamage = (suhde + 3) * damage / (suhde * 3 +1);
         int rounds = (int) Math.ceil(1.0 / actualDamage);
         return rounds;
     }
@@ -55,7 +56,8 @@ public class Voimasuhde {
      * @return hyökkääjän vaatimien voittojen määrä.
      */
     public int victoryAttackReturn() {
-        double actualDamage = hyokkayssuhde * damage / puolustussuhde;
+        double suhde = hyokkayssuhde / puolustussuhde;
+        double actualDamage = (suhde * 3 + 1) * damage / (suhde + 3);
         int rounds = (int) Math.ceil(1.0 / actualDamage);
         return rounds;
     }

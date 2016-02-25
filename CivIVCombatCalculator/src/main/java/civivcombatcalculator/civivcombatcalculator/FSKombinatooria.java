@@ -43,6 +43,9 @@ public class FSKombinatooria {
      */
     private void voimaKombinaatio(int kukaFS) {
         double chance = 1.0;
+        if (kukaFS == 0 && kokoFS > 0) {
+            chance *= Math.pow(voimasuhde.defendReturn(), kokoFS);
+        }
         if (kukaFS < 0) {
             Kombinatooria kombi = new Kombinatooria(0 - kokoFS, 0 - kukaFS);
             chance *= kombi.kombinaatio();
@@ -54,6 +57,9 @@ public class FSKombinatooria {
             chance *= kombi.kombinaatio();
             chance *= Math.pow(voimasuhde.attackReturn(), kukaFS);
             chance *= Math.pow(voimasuhde.defendReturn(), kokoFS - kukaFS);
+        }
+        if (kukaFS == 0 && kokoFS < 0) {
+            chance *= Math.pow(voimasuhde.attackReturn(), 0 - kokoFS);
         }
         mahdollisuudet.add(chance);
     }
@@ -69,5 +75,8 @@ public class FSKombinatooria {
      */
     public ArrayList palautaMaarat(){
         return maarat;
+    }
+    public int palautaFS() {
+        return kokoFS;
     }
 }

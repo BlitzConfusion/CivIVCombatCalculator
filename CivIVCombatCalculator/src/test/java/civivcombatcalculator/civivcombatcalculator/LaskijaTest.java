@@ -47,5 +47,57 @@ public class LaskijaTest {
     //Laskija laskija = new Laskija(n, n, 0, 0, 0, 0);
     //assertTrue(laskija.laskeHyokkaysTod() == 0.5);
     //}
+
+    /**
+     * Test of laskeHyokkaysTod method, of class Laskija.
+     */
+    @Test
+    public void testLaskeHyokkaysTod() {
+        System.out.println("laskeHyokkaysTod");
+        Laskija instance = null;
+        instance.laskeHyokkaysTod();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of laskeRajoitettu method, of class Laskija.
+     */
+    @Test
+    public void testLaskeRajoitettu() {
+        System.out.println("laskeRajoitettu");
+        Laskija instance = null;
+        instance.laskeRajoitettu();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of returnWithdraw method, of class Laskija.
+     */
+    @Test
+    public void testReturnWithdraw() {
+        System.out.println("returnWithdraw");
+        Laskija instance = null;
+        double expResult = 0.0;
+        double result = instance.returnWithdraw();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of returnOdds method, of class Laskija.
+     */
+    @Test
+    public void testReturnOdds() {
+        System.out.println("returnOdds");
+        Laskija instance = null;
+        double expResult = 0.0;
+        double result = instance.returnOdds();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }
