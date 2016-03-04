@@ -14,3 +14,5 @@ Kombinatooria-tapaukset ovat sekä Laskijan että FSKombinatoorian alaisuudessa.
 Kun Laskija on suorittanut laskunsa, käyttöliittymä poimii saadut oleelliset arvot, ja näyttää ne käyttäjälle.
 
 Käyttäjä voi suorittaa Calculate-toiminnon eri inputeilla kuinka monta kertaa vain haluaa, tai sammuttaa ohjelman 'Close'-nappulalla.
+
+Note: Ladatkaa .zip. Tämä ohjelma ei edellytä mitään erikoista, ja jostain syystä en ikinä ilmeisesti saanut osoitetta oikein Jar:ia varten.
