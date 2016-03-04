@@ -1,3 +1,5 @@
+## CivIVCombatCalculator Tuntikirjanpito
+
 21.1.2016: Noin 2 tuntia käytetty githubin ja muiden oleellisten käyttöliittymien alustukseen. 
 Noin 2 tuntia Netbeans CivIVCombatCalculator:n alustukseen.
 
