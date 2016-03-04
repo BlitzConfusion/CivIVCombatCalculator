@@ -1,4 +1,4 @@
-CivIVCombatCalculator-rakennekuvaus
+# CivIVCombatCalculator-rakennekuvaus
 
 Ohjelman Main:na toimii graafinen käyttöliittymä paketissaan.
 Laskija-luokka on keskeisin laskutoimituksen tietojen pyörittelijä.
