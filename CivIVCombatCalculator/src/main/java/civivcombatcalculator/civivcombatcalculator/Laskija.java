@@ -64,12 +64,15 @@ public final class Laskija {
      * Laskee ja kertoo hyökkääjän voiton todennäköisyyden.
      */
     //Tämä on alustava esimerkki ennen First Striken lisäystä.
-    public void laskeHyokkaysTod(){
+    public void laskeHyokkaysTod() {
         int aLength = voimasuhde.victoryAttackReturn();
         int dLength = voimasuhde.victoryDefendReturn();
         propability = laskija(aLength, dLength);
                 
     }
+    /**
+     * First Strike-versio todennäköisyydenlaskijasta.
+     */
     public void laskeFSTod() {
         double chance = 0;
         int aLength = voimasuhde.victoryAttackReturn();
@@ -84,7 +87,6 @@ public final class Laskija {
                 chance += subchance;
             }
         } else {
-            
             for (int i = 0; i <= fsKombinatooria.palautaFS(); i++) {
                 double subchance = 
                         (double) fsKombinatooria.palautaMahdollisuudet().get(i);
@@ -134,6 +136,7 @@ public final class Laskija {
     
     /**
      * Palauttaa lopullisen Withdraw:n todennäköisyyden.
+     * @return Palauttaa lopullisen Withdraw-todennäköisyyden.
      */
     public double returnWithdraw() {
         if (rounds == 0) {
@@ -147,7 +150,7 @@ public final class Laskija {
     }
     /**
      * Palauttaa lopullisen hyökkääjän voittotodennäköisyyden.
-     * @return 
+     * @return voittotodennäköisyys.
      */
     public double returnOdds() {
         double val = propability * 10000;
@@ -155,7 +158,12 @@ public final class Laskija {
         val = val / 100;
         return val;
     }
-    
+    /**
+     * Toimii välilaskijana kombinaatioille normaalin ja FS-laskijan apuna.
+     * @param lukua on hyökkääjän osalta voitot
+     * @param lukud on puolustajan osalta voitot.
+     * @return todennäköisyys tälle tapaukselle.
+     */
     private double laskija(int lukua, int lukud) {
         
         if (lukud > 10) {

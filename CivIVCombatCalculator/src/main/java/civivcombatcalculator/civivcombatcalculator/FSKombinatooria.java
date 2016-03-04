@@ -7,13 +7,12 @@ package civivcombatcalculator.civivcombatcalculator;
 import java.util.*;
 /**
  * Luokka laskee eri mahdolliset First Strike:n vaikutukset.
- * ArrayListit antavat järjestyksessä voitot ja todennäköisyydet.
+ * ArrayList antaa järjestyksessä todennäköisyydet.
  */
 public class FSKombinatooria {
     private final Voimasuhde voimasuhde;
     private final int kokoFS;
-    private ArrayList<Double> mahdollisuudet = new ArrayList();
-    private ArrayList<Integer> maarat = new ArrayList();
+    private final ArrayList<Double> mahdollisuudet = new ArrayList();
     
     /**
      * Konstruktori kutsuu jo mahdollisuustäyttäjää ArrayListejä varten.
@@ -22,7 +21,7 @@ public class FSKombinatooria {
      * @param dFS on puolustajan First Strike-määrä.
      * Ne vähennetään toisistaan.
      */
-    public FSKombinatooria(Voimasuhde suhde, int aFS, int dFS){
+    public FSKombinatooria(Voimasuhde suhde, int aFS, int dFS) {
         voimasuhde = suhde;
         kokoFS = aFS - dFS;
         mahdollisuusTayttaja();
@@ -33,7 +32,6 @@ public class FSKombinatooria {
      */
     private void mahdollisuusTayttaja() {
         for (int i = Math.min(kokoFS, 0); i <= Math.max(kokoFS, 0); i++) {
-            maarat.add(i);
             voimaKombinaatio(i);
         }
     }
@@ -65,17 +63,16 @@ public class FSKombinatooria {
     }
     /**
      * Palauttaa ArrayListin todennäköisyyksistä.
+     * @return mahdollisuudet, eli todennäköisyydet.
      */
     public ArrayList palautaMahdollisuudet() {
         return mahdollisuudet;
     }
     
     /**
-     * Palauttaa ArrayListin First Strike:jen määrästä.
+     * Palauttaa tiedon First Strike-kokonauhtesta.
+     * @return integerinä kenellä First Strikeä.
      */
-    public ArrayList palautaMaarat(){
-        return maarat;
-    }
     public int palautaFS() {
         return kokoFS;
     }

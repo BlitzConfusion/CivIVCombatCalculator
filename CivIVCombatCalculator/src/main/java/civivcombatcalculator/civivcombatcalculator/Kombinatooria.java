@@ -26,6 +26,7 @@ public class Kombinatooria {
     
     /**
      * Metodi laskee tapauksien P ja !P kombinaatioiden lukumäärän joukossa n.
+     * @return kombinaatioiden määrä.
      */
     public int kombinaatio() {
         int n = suuri;

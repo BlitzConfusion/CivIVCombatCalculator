@@ -16,7 +16,7 @@ import javax.swing.*;
 public class CombatCalculator extends javax.swing.JFrame {
 
     /**
-     * Creates new form CombatCalculator
+     * Creates new form CombatCalculator.
      */
     public CombatCalculator() {
         initComponents();
@@ -31,112 +31,139 @@ public class CombatCalculator extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
+        customRules = new javax.swing.JLabel();
+        attackerTitle = new javax.swing.JLabel();
+        defenderTitle = new javax.swing.JLabel();
+        damagePerRoundTitle = new javax.swing.JLabel();
+        numRoundsTitle = new javax.swing.JLabel();
         dpr = new javax.swing.JSpinner();
         numrounds = new javax.swing.JSpinner();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        aStrengthTitle = new javax.swing.JLabel();
+        aBonusTitle = new javax.swing.JLabel();
         aBonus = new javax.swing.JSpinner();
-        jLabel9 = new javax.swing.JLabel();
+        aWithdrawalTitle = new javax.swing.JLabel();
         aWithdraw = new javax.swing.JSpinner();
-        jLabel10 = new javax.swing.JLabel();
+        aFSTitle = new javax.swing.JLabel();
         aFS = new javax.swing.JSpinner();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        dStrengthTitle = new javax.swing.JLabel();
+        dBonusTitle = new javax.swing.JLabel();
         dBonus = new javax.swing.JSpinner();
-        jLabel14 = new javax.swing.JLabel();
+        dFSTitle = new javax.swing.JLabel();
         dFS = new javax.swing.JSpinner();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        victoryTitle = new javax.swing.JLabel();
+        withdrawalTitle = new javax.swing.JLabel();
         victorychance = new javax.swing.JTextField();
         withdrawalchanceresult = new javax.swing.JTextField();
         startButton = new javax.swing.JButton();
         aStrength = new javax.swing.JSpinner();
         dStrength = new javax.swing.JSpinner();
-        jLabel19 = new javax.swing.JLabel();
+        resultAccuracyDisclaimer = new javax.swing.JLabel();
+        generalAdvice = new javax.swing.JLabel();
+        closeButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel1.setText("Combat Calculator for Sid Meyer's Civilization IV");
+        title.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        title.setText("Combat Calculator for Sid Meier's Civilization IV");
+        title.setToolTipText("<html>Combat in Civilization IV happens between two opposing Units: an Attacker and a Defender.<br>\nThe Units always have a Strength, and possibly a situational Bonus, one or more First Strikes and a Withdrawal Chance.<br>\nThe situational bonuses act as +% multipliers to the Unit Strength. Unlike one could expect, opposing<br>\nBonuses negate each other until only one side at most has a Bonus.<br>\nThe Combat happens in Rounds, which are normally unlimited in number. Each round the adjusted<br> \nStrengths of the Units are compared, and get propotional chance of victory of that Round.<br>\nWinner of the round causes Damage relative to winner's Strength and chosen Damage multiplier.<br>\nThe health of the loser of the round reduces, although for further rounds loser's strength is not reduced.<br>\nThe first party to run out of health is destroyed.<br>\nIn case the Attacker would be destroyed, they have chance to Withdraw equal to their Withdrawal value.<br>\nFirst Strikes are basically equal number Rounds where the party with First Strike/-s takes no Damage.<br>\n<br>\nIf limited number of Rounds are chosen, Withdrawal chance and First Strikes are ignored.<br>\nInstead, the parties have limited Rounds to defeat each other, and should neither party be destroyed,<br>\nthe Attacker withdraws automatically after the last Round of Combat.</html>");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel2.setText("Custom Rules");
+        customRules.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        customRules.setText("Custom Rules");
+        customRules.setToolTipText("<html>Directly below are the adjustable Combat rules that govern both Parties of the Combat.<br>\nDamage adjusts how much damage the winner of a Round causes to the opposition.<br>\nThe other factors are the relative Strengths of the parties and a non-trivial formula<br>\nthat is impractically complicated to explain to a casual user.<br>\nIf one is not a casual user one propably knows the formula anyway.</html>");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel3.setText("Attacker");
+        attackerTitle.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        attackerTitle.setText("Attacker");
+        attackerTitle.setToolTipText("Directly below are the tools for setting the properties of the Attacker.");
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel4.setText("Defender");
+        defenderTitle.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        defenderTitle.setText("Defender");
+        defenderTitle.setToolTipText("Directly below are the tools for setting the properties of the Defender.");
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel5.setText("<html>Damage%/Round<br>\nOnly values 20-100.</html>");
+        damagePerRoundTitle.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        damagePerRoundTitle.setText("<html>Damage%/Round<br>\nOnly values 20-100.</html>");
+        damagePerRoundTitle.setToolTipText("<html>How much damage in percentages is caused each Round to the loser of the Round.<br>\nThe other affecting factors in Damage are the relative Strengths of the parties.</html> ");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel6.setText("<html>Number of Rounds.<br>\nNormal Air Combat has 5.<br>\nSet to 0 for unlimited rounds.</html>");
+        numRoundsTitle.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        numRoundsTitle.setText("<html>Number of Rounds.<br>\nNormal Air Combat has 5.<br>\nSet to 0 for unlimited rounds.</html>");
+        numRoundsTitle.setToolTipText("<html>The number of Combat ounds gives an upper limit how long a Combat can take.<br>\nIf set to 0, the amount of Rounds allowed is unlimited. For example, Air Combat has 5 Rounds,<br>\nwhile normal combat has unlimited Rounds (Set the Spinner below to 0 to simulate unlimited Rounds).\n</html>");
 
         dpr.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         dpr.setModel(new javax.swing.SpinnerNumberModel(20, 20, 100, 5));
+        dpr.setToolTipText("Use Spinner-arrows or write with keyboard-numbers to set the Damage value of Combat.");
 
         numrounds.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         numrounds.setModel(new javax.swing.SpinnerNumberModel(0, 0, 20, 1));
+        numrounds.setToolTipText("Use Spinner-arrows or write with keyboard-numbers to set the Round Duration of Combat.");
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel7.setText("<html>Strength Value between 1 and 400<br>Remember, combat compares ratios.</html>");
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        aStrengthTitle.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        aStrengthTitle.setText("<html>Strength Value between 1 and 400<br>Remember, combat compares ratios.</html>");
+        aStrengthTitle.setToolTipText("<html>Combat in Civilization IV works by relative Strength between the parties.<br>\nTherefore, Combat between Strengths 9 and 10, 18 and 20 and 360 and 400 are all the same<br>\nfor all practical purposes.<br>\nThus, if you want to give fractional Strength as input, just multiply the Strength of both parties by 10.</html>");
+        aStrengthTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel8.setText("<html>Combat Bonus percentage.<br> Value between 0 and 300</html>");
+        aBonusTitle.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        aBonusTitle.setText("<html>Combat Bonus percentage.<br> Value between 0 and 300</html>");
+        aBonusTitle.setToolTipText("<html>Combat Bonus works by adding a percentage of the Strength of the party to the Strength of that Party.<br>\nUnlike one would expect, opposing Bonus-percentages are directly subtracted from one another until<br>\nonly at most one party has Bonus left. <br>\nThus, if you want to give a party a negative \"Bonus\", just add that amount to the Bonus of the other Party.</html>");
 
         aBonus.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         aBonus.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 5));
+        aBonus.setToolTipText("Use Spinner-arrows or write with keyboard-numbers to set the +% multiplier for the Strength of the Attacker.");
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel9.setText("<html>Withdrawal Chance on defeat.<br>Ignored on limited rounds.</html>");
+        aWithdrawalTitle.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        aWithdrawalTitle.setText("<html>Withdrawal Chance on defeat.<br>Ignored on limited rounds.</html>");
+        aWithdrawalTitle.setToolTipText("<html>On defeat, the Attacker may have a chance to Withdraw instead of being destroyed.<br>\nThus, to get the 'real' chance the Combat ends in Withdraw, one has to know how likely<br>\nit is for the Attacker to Withdraw when defeated. The Withdrawal Chance, so to speak.<br>\n<br>\nThis feature is not used when there are only limited amount of Combat Rounds,<br>\nfor in that situation the chance of a tie is the chance of withdrawal.</html>");
 
         aWithdraw.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         aWithdraw.setModel(new javax.swing.SpinnerNumberModel(0, 0, 95, 5));
 
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel10.setText("First Strikes. Ignored on limited rounds.");
+        aFSTitle.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        aFSTitle.setText("First Strikes. Ignored on limited rounds.");
+        aFSTitle.setToolTipText("<html>Fisrt Strikes are a one-a-Round-of-Combat diminishing resource that tells<br>\nthat the party with this resource is invulnerable during this combat Round.<br>\nThus, the party with First Strike/-s has a chance to cause damage to the enemy without risk to<br>\nthemselves, only becoming vulnerable once they run out of First Strikes.<br>\n<br>\nFor obvious balance reasons, First Strikes are not in use when Combat has limited amount of Rounds.</html>");
 
         aFS.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         aFS.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        aFS.setToolTipText("Use Spinner-arrows or write with keyboard-numbers to set the amount of the First Strikes for the Attacker.");
 
-        jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel12.setText("<html>Strength Value between 1 and 400</html>");
-        jLabel12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        dStrengthTitle.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        dStrengthTitle.setText("<html>Strength Value between 1 and 400</html>");
+        dStrengthTitle.setToolTipText("<html>Combat in Civilization IV works by relative Strength between the parties.<br>\nTherefore, Combat between Strengths 9 and 10, 18 and 20 and 360 and 400 are all the same<br>\nfor all practical purposes.<br>\nThus, if you want to give fractional Strength as input, just multiply the Strength of both parties by 10.</html>");
+        dStrengthTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel13.setText("<html>Combat Bonus percentage.<br> Value between 0 and 300</html>");
+        dBonusTitle.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        dBonusTitle.setText("<html>Combat Bonus percentage.<br> Value between 0 and 300</html>");
+        dBonusTitle.setToolTipText("<html>Combat Bonus works by adding a percentage of the Strength of the party to the Strength of that Party.<br>\nUnlike one would expect, opposing Bonus-percentages are directly subtracted from one another until<br>\nonly at most one party has Bonus left. <br>\nThus, if you want to give a party a negative \"Bonus\", just add that amount to the Bonus of the other Party.</html>");
 
         dBonus.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         dBonus.setModel(new javax.swing.SpinnerNumberModel(0, 0, 300, 5));
+        dBonus.setToolTipText("Use Spinner-arrows or write with keyboard-numbers to set the +% multiplier for the Strength of the Defender.");
 
-        jLabel14.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel14.setText("First Strikes. Ignored on limited rounds.");
+        dFSTitle.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        dFSTitle.setText("First Strikes. Ignored on limited rounds.");
+        dFSTitle.setToolTipText("<html>Fisrt Strikes are a one-a-Round-of-Combat diminishing resource that tells<br>\nthat the party with this resource is invulnerable during this combat Round.<br>\nThus, the party with First Strike/-s has a chance to cause damage to the enemy without risk to<br>\nthemselves, only becoming vulnerable once they run out of First Strikes.<br>\n<br>\nFor obvious balance reasons, First Strikes are not in use when Combat has limited amount of Rounds.</html>");
 
         dFS.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         dFS.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        dFS.setToolTipText("Use Spinner-arrows or write with keyboard-numbers to set the amount of First Strikes for the Defender.");
 
-        jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel16.setText("Victory Chance in %:");
+        victoryTitle.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        victoryTitle.setText("Victory Chance in %:");
+        victoryTitle.setToolTipText("On press of the Calculate-button, below appears the %-chance of Attacker winning the Combat.");
 
-        jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel17.setText("Withdrawal Chance in %:");
+        withdrawalTitle.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        withdrawalTitle.setText("Withdrawal Chance in %:");
+        withdrawalTitle.setToolTipText("<html>When Calculate-button is pressed, below appears the %-chance that the Attacker has to withdraw<br>\nfrom Combat. If the number of Rounds is limited, the chance is based on neither party being defeated; on<br>\nlimitless Rounds the chance is based on Withdrawal Chance of Attacker and the chance of Attacker not winning. </html>");
 
         victorychance.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        victorychance.setToolTipText("This is where the %-chance of Attacker victory appears on the press of Calculate-button to the far left.");
 
         withdrawalchanceresult.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        withdrawalchanceresult.setToolTipText("<html>This is where the 'real' %-chance that the Combat ends in Attacker Withdrawal appears<br>\non the press of the Calculate-button on the far left.</html>");
 
         startButton.setBackground(new java.awt.Color(0, 255, 0));
+        startButton.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         startButton.setText("Calculate");
+        startButton.setToolTipText("Press to calculate the odds of Attacker victory based on given input.");
         startButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startButtonActionPerformed(evt);
@@ -145,83 +172,103 @@ public class CombatCalculator extends javax.swing.JFrame {
 
         aStrength.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         aStrength.setModel(new javax.swing.SpinnerNumberModel(50, 1, 400, 1));
+        aStrength.setToolTipText("Use Spinner-arrows or write with keyboard-numbers to set the Strength of the Attacker.");
 
+        dStrength.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         dStrength.setModel(new javax.swing.SpinnerNumberModel(50, 1, 400, 1));
+        dStrength.setToolTipText("Use Spinner-arrows or write with keyboard-numbers to set the Strength of the Defender.");
 
-        jLabel19.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel19.setText("The result accurate to 0.05%.");
+        resultAccuracyDisclaimer.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        resultAccuracyDisclaimer.setText("The result accurate to 0.05%.");
+        resultAccuracyDisclaimer.setToolTipText("<html>The result has minimal rounding error due to trivial Health-reduction rounding.<br>\nHowever, as the Calculator gives higher accuracy than the in-game tooltip, this should not matter.</html>");
+
+        generalAdvice.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        generalAdvice.setText("<html>Welcome to Sid Meier's Civilization IV fan-made Combat Calculator.<br>\nIf you need help, hover the cursor over an element to receive advice about the use of the element of<br>\nthis Calculator. The Calculator does not yet implement First Strike Chances, Collateral Damage nor<br>\nInterception in Air Combat. Hover over the title above to read about the combat rules of Civilization IV.</html>");
+        generalAdvice.setToolTipText("<html>Hover over an element to get tool-tip about<br>\nthe use of this element and general advice.</html>");
+
+        closeButton.setBackground(new java.awt.Color(255, 0, 0));
+        closeButton.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        closeButton.setText("Close");
+        closeButton.setToolTipText("Press to close the Calculator Window.");
+        closeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                closeButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(60, 60, 60))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(damagePerRoundTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(numrounds, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dpr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(numRoundsTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(startButton)
+                                .addComponent(resultAccuracyDisclaimer))
+                            .addComponent(customRules, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(aStrengthTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(aBonusTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(aBonus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(aWithdrawalTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(aWithdraw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(aFSTitle)
+                                    .addComponent(aStrength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(attackerTitle))
+                                .addGap(60, 60, 60))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(aFS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(victoryTitle)
+                                    .addComponent(victorychance, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(numrounds, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dpr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(startButton))
-                    .addComponent(jLabel19))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addGap(89, 89, 89))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(aBonus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(aWithdraw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10)
-                            .addComponent(aFS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(aStrength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16)
-                            .addComponent(victorychance, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(60, 60, 60)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(defenderTitle)
                             .addComponent(dFS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14)
+                            .addComponent(dFSTitle)
                             .addComponent(dBonus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dBonusTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dStrengthTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(dStrength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17)
+                            .addComponent(withdrawalTitle)
                             .addComponent(withdrawalchanceresult, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(generalAdvice, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(title)
+                        .addGap(118, 118, 118))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(title)
+                .addGap(9, 9, 9)
+                .addComponent(generalAdvice, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(customRules)
+                    .addComponent(attackerTitle)
+                    .addComponent(defenderTitle))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(damagePerRoundTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(aStrengthTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dStrengthTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(dpr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,48 +276,49 @@ public class CombatCalculator extends javax.swing.JFrame {
                         .addComponent(aStrength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(dStrength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(aBonus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dBonus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(aBonusTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(aBonus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(numRoundsTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dBonusTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(numrounds, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(aWithdrawalTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dBonus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
+                    .addComponent(dFSTitle)
                     .addComponent(aWithdraw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(dFS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel19))
+                    .addComponent(aFSTitle)
+                    .addComponent(resultAccuracyDisclaimer))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(aFS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(4, 4, 4)
-                                .addComponent(jLabel17))
+                                .addComponent(withdrawalTitle))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel16)))
+                                .addComponent(victoryTitle)))
                         .addGap(13, 13, 13)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(withdrawalchanceresult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(victorychance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(closeButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         pack();
@@ -292,6 +340,10 @@ public class CombatCalculator extends javax.swing.JFrame {
         victorychance.setText(Double.toString(laskija.returnOdds()));
         withdrawalchanceresult.setText(Double.toString(laskija.returnWithdraw()));
     }//GEN-LAST:event_startButtonActionPerformed
+
+    private void closeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeButtonActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_closeButtonActionPerformed
     
     /**
      * @param args the command line arguments
@@ -309,58 +361,57 @@ public class CombatCalculator extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CombatCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CombatCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CombatCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CombatCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        
+        javax.swing.ToolTipManager.sharedInstance().setDismissDelay(100000);
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new CombatCalculator().setVisible(true);
+                CombatCalculator laskin = new CombatCalculator();
+                laskin.setLocationRelativeTo(null);
+                laskin.setVisible(true);
             }
         });
     }
-    public void kaynnista(){
-        new CombatCalculator().setVisible(true);
     
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSpinner aBonus;
+    private javax.swing.JLabel aBonusTitle;
     private javax.swing.JSpinner aFS;
+    private javax.swing.JLabel aFSTitle;
     private javax.swing.JSpinner aStrength;
+    private javax.swing.JLabel aStrengthTitle;
     private javax.swing.JSpinner aWithdraw;
+    private javax.swing.JLabel aWithdrawalTitle;
+    private javax.swing.JLabel attackerTitle;
+    private javax.swing.JButton closeButton;
+    private javax.swing.JLabel customRules;
     private javax.swing.JSpinner dBonus;
+    private javax.swing.JLabel dBonusTitle;
     private javax.swing.JSpinner dFS;
+    private javax.swing.JLabel dFSTitle;
     private javax.swing.JSpinner dStrength;
+    private javax.swing.JLabel dStrengthTitle;
+    private javax.swing.JLabel damagePerRoundTitle;
+    private javax.swing.JLabel defenderTitle;
     private javax.swing.JSpinner dpr;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel generalAdvice;
+    private javax.swing.JLabel numRoundsTitle;
     private javax.swing.JSpinner numrounds;
+    private javax.swing.JLabel resultAccuracyDisclaimer;
     private javax.swing.JButton startButton;
+    private javax.swing.JLabel title;
+    private javax.swing.JLabel victoryTitle;
     private javax.swing.JTextField victorychance;
+    private javax.swing.JLabel withdrawalTitle;
     private javax.swing.JTextField withdrawalchanceresult;
     // End of variables declaration//GEN-END:variables
 }

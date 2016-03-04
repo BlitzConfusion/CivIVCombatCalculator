@@ -24,68 +24,67 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace pref="16" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="numrounds" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="dpr" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="damagePerRoundTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="numrounds" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="dpr" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="numRoundsTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="startButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="resultAccuracyDisclaimer" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="customRules" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="startButton" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="aBonus" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="aWithdraw" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="aFS" min="-2" max="-2" attributes="0"/>
-                          <Component id="aStrength" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                          <Component id="victorychance" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="aStrengthTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="aBonusTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="aBonus" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="aWithdrawalTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="aWithdraw" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="aFSTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="aStrength" min="-2" max="-2" attributes="0"/>
+                                  <Component id="attackerTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="aFS" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="victoryTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="victorychance" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="closeButton" min="-2" pref="88" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="defenderTitle" min="-2" max="-2" attributes="0"/>
                           <Component id="dFS" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                          <Component id="dFSTitle" min="-2" max="-2" attributes="0"/>
                           <Component id="dBonus" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                          <Component id="dBonusTitle" min="-2" max="-2" attributes="0"/>
+                          <Component id="dStrengthTitle" min="-2" max="-2" attributes="0"/>
                           <Component id="dStrength" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="withdrawalTitle" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="withdrawalchanceresult" alignment="0" min="-2" pref="126" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="generalAdvice" min="-2" pref="591" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="title" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -94,70 +93,78 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="title" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <Component id="generalAdvice" pref="86" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="customRules" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="attackerTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="defenderTitle" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel5" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="damagePerRoundTitle" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="aStrengthTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="dStrengthTitle" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="dpr" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="aStrength" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="dStrength" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel8" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="aBonusTitle" min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="aBonus" min="-2" max="-2" attributes="0"/>
-                          <Component id="dBonus" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="numRoundsTitle" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jLabel6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="dBonusTitle" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="numrounds" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="aWithdrawalTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dBonus" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dFSTitle" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="aWithdraw" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="dFS" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="aFSTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultAccuracyDisclaimer" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="startButton" min="-2" pref="80" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
                       <Component id="aFS" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                              <Component id="withdrawalTitle" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                              <Component id="victoryTitle" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
@@ -166,63 +173,66 @@
                           <Component id="victorychance" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Component id="startButton" min="-2" pref="80" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="closeButton" alignment="1" min="-2" pref="78" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="title">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Combat Calculator for Sid Meyer&apos;s Civilization IV"/>
+        <Property name="text" type="java.lang.String" value="Combat Calculator for Sid Meier&apos;s Civilization IV"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;Combat in Civilization IV happens between two opposing Units: an Attacker and a Defender.&lt;br&gt;&#xa;The Units always have a Strength, and possibly a situational Bonus, one or more First Strikes and a Withdrawal Chance.&lt;br&gt;&#xa;The situational bonuses act as +% multipliers to the Unit Strength. Unlike one could expect, opposing&lt;br&gt;&#xa;Bonuses negate each other until only one side at most has a Bonus.&lt;br&gt;&#xa;The Combat happens in Rounds, which are normally unlimited in number. Each round the adjusted&lt;br&gt; &#xa;Strengths of the Units are compared, and get propotional chance of victory of that Round.&lt;br&gt;&#xa;Winner of the round causes Damage relative to winner&apos;s Strength and chosen Damage multiplier.&lt;br&gt;&#xa;The health of the loser of the round reduces, although for further rounds loser&apos;s strength is not reduced.&lt;br&gt;&#xa;The first party to run out of health is destroyed.&lt;br&gt;&#xa;In case the Attacker would be destroyed, they have chance to Withdraw equal to their Withdrawal value.&lt;br&gt;&#xa;First Strikes are basically equal number Rounds where the party with First Strike/-s takes no Damage.&lt;br&gt;&#xa;&lt;br&gt;&#xa;If limited number of Rounds are chosen, Withdrawal chance and First Strikes are ignored.&lt;br&gt;&#xa;Instead, the parties have limited Rounds to defeat each other, and should neither party be destroyed,&lt;br&gt;&#xa;the Attacker withdraws automatically after the last Round of Combat.&lt;/html&gt;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="customRules">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Custom Rules"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;Directly below are the adjustable Combat rules that govern both Parties of the Combat.&lt;br&gt;&#xa;Damage adjusts how much damage the winner of a Round causes to the opposition.&lt;br&gt;&#xa;The other factors are the relative Strengths of the parties and a non-trivial formula&lt;br&gt;&#xa;that is impractically complicated to explain to a casual user.&lt;br&gt;&#xa;If one is not a casual user one propably knows the formula anyway.&lt;/html&gt;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="attackerTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Attacker"/>
+        <Property name="toolTipText" type="java.lang.String" value="Directly below are the tools for setting the properties of the Attacker."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="defenderTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="18" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Defender"/>
+        <Property name="toolTipText" type="java.lang.String" value="Directly below are the tools for setting the properties of the Defender."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="damagePerRoundTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;Damage%/Round&lt;br&gt;&#xa;Only values 20-100.&lt;/html&gt;"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;How much damage in percentages is caused each Round to the loser of the Round.&lt;br&gt;&#xa;The other affecting factors in Damage are the relative Strengths of the parties.&lt;/html&gt; "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="numRoundsTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;Number of Rounds.&lt;br&gt;&#xa;Normal Air Combat has 5.&lt;br&gt;&#xa;Set to 0 for unlimited rounds.&lt;/html&gt;"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;The number of Combat ounds gives an upper limit how long a Combat can take.&lt;br&gt;&#xa;If set to 0, the amount of Rounds allowed is unlimited. For example, Air Combat has 5 Rounds,&lt;br&gt;&#xa;while normal combat has unlimited Rounds (Set the Spinner below to 0 to simulate unlimited Rounds).&#xa;&lt;/html&gt;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="dpr">
@@ -233,6 +243,7 @@
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="20" maximum="100" minimum="20" numberType="java.lang.Integer" stepSize="5" type="number"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Use Spinner-arrows or write with keyboard-numbers to set the Damage value of Combat."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="numrounds">
@@ -243,23 +254,26 @@
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="0" maximum="20" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Use Spinner-arrows or write with keyboard-numbers to set the Round Duration of Combat."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
+    <Component class="javax.swing.JLabel" name="aStrengthTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;Strength Value between 1 and 400&lt;br&gt;Remember, combat compares ratios.&lt;/html&gt;"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;Combat in Civilization IV works by relative Strength between the parties.&lt;br&gt;&#xa;Therefore, Combat between Strengths 9 and 10, 18 and 20 and 360 and 400 are all the same&lt;br&gt;&#xa;for all practical purposes.&lt;br&gt;&#xa;Thus, if you want to give fractional Strength as input, just multiply the Strength of both parties by 10.&lt;/html&gt;"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
+    <Component class="javax.swing.JLabel" name="aBonusTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;Combat Bonus percentage.&lt;br&gt; Value between 0 and 300&lt;/html&gt;"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;Combat Bonus works by adding a percentage of the Strength of the party to the Strength of that Party.&lt;br&gt;&#xa;Unlike one would expect, opposing Bonus-percentages are directly subtracted from one another until&lt;br&gt;&#xa;only at most one party has Bonus left. &lt;br&gt;&#xa;Thus, if you want to give a party a negative &quot;Bonus&quot;, just add that amount to the Bonus of the other Party.&lt;/html&gt;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="aBonus">
@@ -270,14 +284,16 @@
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="0" maximum="300" minimum="0" numberType="java.lang.Integer" stepSize="5" type="number"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Use Spinner-arrows or write with keyboard-numbers to set the +% multiplier for the Strength of the Attacker."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
+    <Component class="javax.swing.JLabel" name="aWithdrawalTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;Withdrawal Chance on defeat.&lt;br&gt;Ignored on limited rounds.&lt;/html&gt;"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;On defeat, the Attacker may have a chance to Withdraw instead of being destroyed.&lt;br&gt;&#xa;Thus, to get the &apos;real&apos; chance the Combat ends in Withdraw, one has to know how likely&lt;br&gt;&#xa;it is for the Attacker to Withdraw when defeated. The Withdrawal Chance, so to speak.&lt;br&gt;&#xa;&lt;br&gt;&#xa;This feature is not used when there are only limited amount of Combat Rounds,&lt;br&gt;&#xa;for in that situation the chance of a tie is the chance of withdrawal.&lt;/html&gt;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="aWithdraw">
@@ -290,12 +306,13 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
+    <Component class="javax.swing.JLabel" name="aFSTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="First Strikes. Ignored on limited rounds."/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;Fisrt Strikes are a one-a-Round-of-Combat diminishing resource that tells&lt;br&gt;&#xa;that the party with this resource is invulnerable during this combat Round.&lt;br&gt;&#xa;Thus, the party with First Strike/-s has a chance to cause damage to the enemy without risk to&lt;br&gt;&#xa;themselves, only becoming vulnerable once they run out of First Strikes.&lt;br&gt;&#xa;&lt;br&gt;&#xa;For obvious balance reasons, First Strikes are not in use when Combat has limited amount of Rounds.&lt;/html&gt;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="aFS">
@@ -306,23 +323,26 @@
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Use Spinner-arrows or write with keyboard-numbers to set the amount of the First Strikes for the Attacker."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel12">
+    <Component class="javax.swing.JLabel" name="dStrengthTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;Strength Value between 1 and 400&lt;/html&gt;"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;Combat in Civilization IV works by relative Strength between the parties.&lt;br&gt;&#xa;Therefore, Combat between Strengths 9 and 10, 18 and 20 and 360 and 400 are all the same&lt;br&gt;&#xa;for all practical purposes.&lt;br&gt;&#xa;Thus, if you want to give fractional Strength as input, just multiply the Strength of both parties by 10.&lt;/html&gt;"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel13">
+    <Component class="javax.swing.JLabel" name="dBonusTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;Combat Bonus percentage.&lt;br&gt; Value between 0 and 300&lt;/html&gt;"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;Combat Bonus works by adding a percentage of the Strength of the party to the Strength of that Party.&lt;br&gt;&#xa;Unlike one would expect, opposing Bonus-percentages are directly subtracted from one another until&lt;br&gt;&#xa;only at most one party has Bonus left. &lt;br&gt;&#xa;Thus, if you want to give a party a negative &quot;Bonus&quot;, just add that amount to the Bonus of the other Party.&lt;/html&gt;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="dBonus">
@@ -333,14 +353,16 @@
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="0" maximum="300" minimum="0" numberType="java.lang.Integer" stepSize="5" type="number"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Use Spinner-arrows or write with keyboard-numbers to set the +% multiplier for the Strength of the Defender."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel14">
+    <Component class="javax.swing.JLabel" name="dFSTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="First Strikes. Ignored on limited rounds."/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;Fisrt Strikes are a one-a-Round-of-Combat diminishing resource that tells&lt;br&gt;&#xa;that the party with this resource is invulnerable during this combat Round.&lt;br&gt;&#xa;Thus, the party with First Strike/-s has a chance to cause damage to the enemy without risk to&lt;br&gt;&#xa;themselves, only becoming vulnerable once they run out of First Strikes.&lt;br&gt;&#xa;&lt;br&gt;&#xa;For obvious balance reasons, First Strikes are not in use when Combat has limited amount of Rounds.&lt;/html&gt;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="dFS">
@@ -351,22 +373,25 @@
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Use Spinner-arrows or write with keyboard-numbers to set the amount of First Strikes for the Defender."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel16">
+    <Component class="javax.swing.JLabel" name="victoryTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Victory Chance in %:"/>
+        <Property name="toolTipText" type="java.lang.String" value="On press of the Calculate-button, below appears the %-chance of Attacker winning the Combat."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel17">
+    <Component class="javax.swing.JLabel" name="withdrawalTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Withdrawal Chance in %:"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;When Calculate-button is pressed, below appears the %-chance that the Attacker has to withdraw&lt;br&gt;&#xa;from Combat. If the number of Rounds is limited, the chance is based on neither party being defeated; on&lt;br&gt;&#xa;limitless Rounds the chance is based on Withdrawal Chance of Attacker and the chance of Attacker not winning. &lt;/html&gt;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="victorychance">
@@ -374,6 +399,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="This is where the %-chance of Attacker victory appears on the press of Calculate-button to the far left."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="withdrawalchanceresult">
@@ -381,6 +407,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;This is where the &apos;real&apos; %-chance that the Combat ends in Attacker Withdrawal appears&lt;br&gt;&#xa;on the press of the Calculate-button on the far left.&lt;/html&gt;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="startButton">
@@ -388,7 +415,11 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="ff" red="0" type="rgb"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Calculate"/>
+        <Property name="toolTipText" type="java.lang.String" value="Press to calculate the odds of Attacker victory based on given input."/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="startButtonActionPerformed"/>
@@ -402,22 +433,52 @@
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="50" maximum="400" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Use Spinner-arrows or write with keyboard-numbers to set the Strength of the Attacker."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="dStrength">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="0"/>
+        </Property>
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="50" maximum="400" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Use Spinner-arrows or write with keyboard-numbers to set the Strength of the Defender."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel19">
+    <Component class="javax.swing.JLabel" name="resultAccuracyDisclaimer">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="The result accurate to 0.05%."/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;The result has minimal rounding error due to trivial Health-reduction rounding.&lt;br&gt;&#xa;However, as the Calculator gives higher accuracy than the in-game tooltip, this should not matter.&lt;/html&gt;"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="generalAdvice">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;Welcome to Sid Meier&apos;s Civilization IV fan-made Combat Calculator.&lt;br&gt;&#xa;If you need help, hover the cursor over an element to receive advice about the use of the element of&lt;br&gt;&#xa;this Calculator. The Calculator does not yet implement First Strike Chances, Collateral Damage nor&lt;br&gt;&#xa;Interception in Air Combat. Hover over the title above to read about the combat rules of Civilization IV.&lt;/html&gt;"/>
+        <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;Hover over an element to get tool-tip about&lt;br&gt;&#xa;the use of this element and general advice.&lt;/html&gt;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="closeButton">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Close"/>
+        <Property name="toolTipText" type="java.lang.String" value="Press to close the Calculator Window."/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="closeButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -26,12 +26,14 @@ public class Voimasuhde {
         damage = damagePerRound;
     }
     /**
+     * Palauttaa hyökkääjän voimasuhteen.
      * @return palauttaa hyökkääjän voimasuhteen.
      */
     public double attackReturn() {
         return hyokkayssuhde;
     }
     /**
+     * Palauttaa puolustajan voimasuhteen.
      * @return palauttaa puolustajan voimasuhteen.
      */
     public double defendReturn() {
@@ -45,7 +47,7 @@ public class Voimasuhde {
      */
     public int victoryDefendReturn() {
         double suhde = hyokkayssuhde / puolustussuhde;
-        double actualDamage = (suhde + 3) * damage / (suhde * 3 +1);
+        double actualDamage = (suhde + 3) * damage / (suhde * 3 + 1);
         int rounds = (int) Math.ceil(1.0 / actualDamage);
         return rounds;
     }

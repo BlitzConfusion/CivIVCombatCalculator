@@ -40,38 +40,52 @@ public class KombinatooriaTest {
     }
     @Test
     public void testZero() throws Exception {	
-      System.out.println("Test Zero situation");
-      int  n = rand.nextInt(50) + 1;
-      Kombinatooria komb = new Kombinatooria(1, 0);
-      int k = komb.kombinaatio();
-      assertTrue(1 == k);
-   }
+        System.out.println("Test Zero situation");
+        Kombinatooria komb = new Kombinatooria(1, 0);
+        int k = komb.kombinaatio();
+        assertTrue(1 == k);
+    }
     @Test
     public void testOne() throws Exception {	
-      System.out.println("Test One situation");
-      int  n = rand.nextInt(50) + 1;
-      Kombinatooria komb = new Kombinatooria(1, 1);
-      int k = komb.kombinaatio();
-      assertTrue(1 == k);
-   }
-    //Jostain syystä tulee nullpointerexception.
-    //@Test
-    //public void testRand() throws Exception {	
-      //System.out.println("Test Random situation");
-      //int  n = rand.nextInt(16) + 2;
-      //Kombinatooria komb = new Kombinatooria();
-      //int k = komb.kombinaatio(n, 1);
-      //assertTrue(k >= 2);
-   //}
-    //@Test
-    //public void testComparison() throws Exception {	
-      //System.out.println("Test Random comparison situation");
-      //int  n = rand.nextInt(6) + 1;
-      //int k = n * 2;
-      //Kombinatooria komb = new Kombinatooria();
-      //int m = komb.kombinaatio(k, n);
-      //int j = komb.kombinaatio(k, n + 1);
-      //assertTrue(m >= j);
-   //}
+        System.out.println("Test One situation");
+        Kombinatooria komb = new Kombinatooria(1, 1);
+        int k = komb.kombinaatio();
+        assertTrue(1 == k);
+    }
+    @Test
+    public void testRand() throws Exception {	
+        System.out.println("Test Random situation");
+        int  n = rand.nextInt(10) + 2;
+        Kombinatooria komb = new Kombinatooria(n, 1);
+        int k = komb.kombinaatio();
+        assertTrue(k >= 2);
+    }
+    @Test
+    public void testComparison() throws Exception {	
+        System.out.println("Test Random comparison situation");
+        int  n = rand.nextInt(6) + 1;
+        int k = n * 2;
+        Kombinatooria komb = new Kombinatooria(k, n);
+        Kombinatooria kombo = new Kombinatooria(k, n + 1);
+        int m = komb.kombinaatio();
+        int j = kombo.kombinaatio();
+        assertTrue(m >= j);
+    }
+    @Test
+    public void testBigger() throws Exception {	
+        System.out.println("Test if K bigger situation");
+        int  n = rand.nextInt(10) + 2;
+        Kombinatooria komb = new Kombinatooria(n, n + 1);
+        int k = komb.kombinaatio();
+        assertTrue(k == 1);
+    }
+    @Test
+    public void testNegative() throws Exception {	
+        System.out.println("Test negative input.");
+        int  n = -1;
+        Kombinatooria komb = new Kombinatooria(n, n);
+        int k = komb.kombinaatio();
+        assertTrue(k == 1);
+    }
     
 }
