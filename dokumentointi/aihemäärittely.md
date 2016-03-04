@@ -42,6 +42,8 @@ Graafinen käyttöliittymä on kaksiosainen lista, johon voi syöttää haluaman
 Painettaessa 'Calculate' saadaan eriteltynä voittotodennäköisyys, Withdrawal Chance,
 ja mahdollisesti vielä voitossa keskimääräinen elämän määrä todennäköisellä voittajalla.
 
+Note: Ladatkaa .zip. Tämä ohjelma ei edellytä mitään erikoista, ja jostain syystä en ikinä ilmeisesti saanut osoitetta oikein Jar:ia varten.
+
 KÄYTTÄJÄT: Pelaaja tai suunnittelija
 
 KAIKKIEN KÄYTTÄJIEN TOIMINNOT: hahmojen olennaisten ominaisuuksien asettaminen. Yleisten olosuhteiden asettaminen. Näiden perusteella tapahtuvan taistelun lopputuloksen laskemisen käynnistäminen.
