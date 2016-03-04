@@ -51,5 +51,5 @@ KAIKKIEN KÄYTTÄJIEN TOIMINNOT: hahmojen olennaisten ominaisuuksien asettaminen
 ![Alt text](https://github.com/BlitzConfusion/CivIVCombatCalculator/blob/master/Kaavio.png)
 
 ## Sekvenssikaavio
-![Alt text](https://github.com/BlitzConfusion/CivIVCombatCalculator/dokumentointi/blob/master/CivIVCombatCalculator.png )
+![Alt text](https://github.com/BlitzConfusion/CivIVCombatCalculator/blob/master/dokumentointi/CivIVCombatCalculator.png )
 
