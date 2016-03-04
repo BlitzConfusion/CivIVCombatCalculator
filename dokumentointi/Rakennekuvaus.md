@@ -13,4 +13,4 @@ FSKombinatooria luo omia Kombinatoorioitaan auttamaan todennäköisyyksien muodo
 Kombinatooria-tapaukset ovat sekä Laskijan että FSKombinatoorian alaisuudessa.
 Kun Laskija on suorittanut laskunsa, käyttöliittymä poimii saadut oleelliset arvot, ja näyttää ne käyttäjälle.
 
-Käyttäjä voi suorittaa Calculate-toiminnon eri inputeilla kuinka monta kertaa vain haluaa, tai sammuttaa ohjelman 'Close'-komennolla.
+Käyttäjä voi suorittaa Calculate-toiminnon eri inputeilla kuinka monta kertaa vain haluaa, tai sammuttaa ohjelman 'Close'-nappulalla.
